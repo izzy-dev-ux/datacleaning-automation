@@ -17,28 +17,4 @@ The query relies on the following inputs:
 
 ## Process Flow Diagram
 
-```mermaid
-flowchart TD
-
-    %% Top level inputs
-    A[Raw Data]
-    B[Ringfenced Data]
-    C[Replace List]
-
-    %% Raw Data branch
-    A --> D[Data Cleaning]
-    D --> E[Cleaned Data]
-
-    %% Ringfenced branch
-    B --> F[Exclude from Processing]
-    F --> E
-
-    %% Replace List branch
-    C --> H[Replace Amounts]
-    C --> I[Calc Amount]
-    C --> J[Adjust Outlier]
-
-    H --> E
-    I --> E
-    J --> E
-
+![Process Flow](flowchart.png)
