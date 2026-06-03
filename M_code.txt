@@ -1,0 +1,82 @@
+let
+    // Step 1: Remove ringfenced records
+    Source =
+        Table.NestedJoin(
+            #"Raw Data",
+            {"FOLDERREF"},
+            #"Ringfenced List",
+            {"FOLDERREF"},
+            "Ringfenced List",
+            JoinKind.LeftAnti
+        ),
+
+    // Step 2: Merge with Replace List
+    Merged =
+        Table.NestedJoin(
+            Source,
+            {"FOLDERREF"},
+            #"Replace List",
+            {"FOLDERREF"},
+            "Replace List",
+            JoinKind.LeftOuter
+        ),
+
+    // Step 3: Expand replacement value
+    Expanded =
+        Table.ExpandTableColumn(
+            Merged,
+            "Replace List",
+            {"Insured Amount"},
+            {"Replace List.Insured Amount"}
+        ),
+
+    // Step 4: Determine replaced payment
+    ReplacedPayment =
+        Table.AddColumn(
+            Expanded,
+            "Replaced.INSUREDPAYMENT",
+            each
+                if [Replace List.Insured Amount] <> null
+                then [Replace List.Insured Amount]
+                else [INSUREDPAYMENT]
+        ),
+
+    // Step 5: Calculate final payment
+    CalculatedPayment =
+        Table.AddColumn(
+            ReplacedPayment,
+            "Calc.INSUREDPAYMENT",
+            each
+                if [FOLDERREF] = 210024 then 0
+                else if [Replaced.INSUREDPAYMENT] is null
+                     then [DATAD] / 12
+                else [Replaced.INSUREDPAYMENT]
+        ),
+
+    // Step 6: Reorder columns
+    Reordered =
+        Table.ReorderColumns(
+            CalculatedPayment,
+            {
+                "FOLDERREF", "PERIOD", "TITLE", "FORENAMES",
+                "SURNAME", "NINO", "DATAD",
+                "Calc.INSUREDPAYMENT", "INSUREDPAYMENT",
+                "Ringfenced List", "Replace List.Insured Amount",
+                "Replaced.INSUREDPAYMENT"
+            }
+        ),
+
+    // Step 7: Remove helper columns
+    Final =
+        Table.RemoveColumns(
+            Reordered,
+            {
+                "DATAD",
+                "INSUREDPAYMENT",
+                "Replace List.Insured Amount",
+                "Replaced.INSUREDPAYMENT"
+            }
+        )
+
+in
+    Final
