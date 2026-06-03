@@ -17,6 +17,25 @@ Designed a Power Query workflow to automate manual payroll reconciliation and re
 - Standardised reporting outputs to improve consistency and accuracy.
 - Created a refreshable workflow that reduced manual processing and reporting time.
 
+# Process Documentation
+> Key Transformations:
+- Removes excluded (ringfenced) records  
+- Applies replacement values where provided  
+- Calculates a final insured payment value for reporting  
+- Amends specific data for record outliers  
+
+> Data Sources
+1. **Raw Data**
+   - Main dataset containing member and payment data  
+2. **Ringfenced List**
+   - Records that must be excluded from processing  
+3. **Replace List**
+   - Contains corrected or updated insured payment values  
+
+> Process Flow Diagram
+
+![image](flowchart.png)
+
 > Opportunities for Further Development
 
 This project uses a simulated dataset based on real-world payroll reporting structures. The original process was constrained by limited access to source systems, relying on SSRS data extracts that often contained data inconsistencies.
