@@ -1,20 +1,35 @@
 # Process Documentation
 
-## This process automates payroll data cleaning and report reconciliation. 
+## Overview
+
+This process automates payroll data cleaning and report reconciliation.
+
+---
+
+## Key Transformations
+
 - Removes excluded (ringfenced) records  
 - Applies replacement values where provided  
 - Calculates a final insured payment value for reporting  
-- Amenda specific data for record outlier 
+- Amends specific data for record outliers  
+
+---
 
 ## Data Sources
-The query relies on the following inputs:
+
+The process relies on the following inputs:
+
 1. **Raw Data**
    - Main dataset containing member and payment data  
+
 2. **Ringfenced List**
    - Records that must be excluded from processing  
+
 3. **Replace List**
    - Contains corrected or updated insured payment values  
 
+---
+
 ## Process Flow Diagram
 
-![Process Flow](flowchart.png)
+![Process Flow](images/flowchart.png)
