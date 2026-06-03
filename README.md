@@ -1,68 +1,31 @@
-# payroll-powerquery-automation
+# Report Automation with Power Query
 Payroll Reporting Automation | Power Query | Excel | Data Transformation
 
-📌 Project Overview: 
+> Project Overview: 
 
-This project demonstrates how a manual, Excel-based payroll reporting process was redesigned into an automated, refreshable analytics workflow using Power Query.
+Designed a Power Query workflow to automate manual payroll reconciliation and reporting processes, reducing processing time, improving data consistency, and minimising manual intervention.
 
-The solution replaces repetitive spreadsheet manipulation with a structured data pipeline, significantly improving reporting speed, accuracy, and scalability.
+> The Problem: 
 
-⚠️ Business Problem with previous Payroll reporting processes:
+- Highly manual, Excel-based reporting process using multiple data sources, VLOOKUPs, and pivot tables.
+- Reports rebuilt from scratch each cycle, creating inefficiencies and increasing the risk of errors.
+- Time-consuming process, taking approximately 2–3 hours per reporting cycle.
 
-Highly manual and Excel-driven
+> The Solution: 
 
-Dependent on VLOOKUPs and pivot tables
+- Automated data cleaning, transformation, and reconciliation using Power Query.
+- Standardised reporting outputs to improve consistency and accuracy.
+- Created a refreshable workflow that reduced manual processing and reporting time.
 
-Rebuilt from scratch each reporting cycle
+> Opportunities for Further Development
 
-Prone to human error and inconsistencies
+This project uses a simulated dataset based on real-world payroll reporting structures. The original process was constrained by limited access to source systems, relying on SSRS data extracts that often contained data inconsistencies.
 
-Time-consuming (2–3 hours per cycle)
+Future enhancements could include:
+- Integration with Power BI dashboards for improved reporting and visualisation.
+- Direct SQL access to improve data quality and transformation upstream.
+- AI-assisted validation and workflow automation to further reduce manual effort.
 
-🎯 Objective to design a scalable, automated reporting solution that:
+> About Me
 
-Reduces manual data processing
-
-Improves data accuracy and consistency
-
-Standardises payroll reporting outputs
-
-Enables fast refreshable reporting in Power Query
-
-🧠 Data Trasnformation in Power Query:
-
-Data cleansing (formatting, missing values, duplicates)
-
-Replacing manual VLOOKUP logic with joins/merges
-
-Standardising schemas across datasets
-
-Transformation Layer
-
-Data modelling logic applied
-
-Consistent reporting structure created
-
-🧩 Skills Demonstrated:
-
-Data Cleaning & Transformation
-
-Power Query (ETL workflows)
-
-Data Modelling
-
-Process Mapping & Optimisation
-
-Analytical Problem Solving
-
-Workflow Automation
-
-🔒 Data Privacy Note:
-
-This project uses a simulated dataset structure based on real-world payroll reporting processes.
-
-No confidential, organisational, or personally identifiable data is included.
-
-📬 About Me
-
-I am a Data Analyst with a background in payroll and large-scale financial data environments. I specialise in data cleaning, reporting automation, and workflow optimisation, with a growing focus on intelligent automation and AI-driven analytics solutions.
+I am a Data Analyst with a background in payroll, pensions, and large-scale financial data environments. I specialise in data cleaning, reporting automation, and workflow optimisation, with a growing interest in intelligent automation and AI-driven analytics solutions.
