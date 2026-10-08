@@ -56,4 +56,7 @@ Future enhancements could include:
 
 I am a Data Analyst with a background in payroll, pensions, and large-scale financial data environments. I specialise in data cleaning, reporting automation, and workflow optimisation, with a growing interest in intelligent automation and AI-driven analytics solutions.
 
-[← Back to Portfolio]([https://github.com/YOUR-USERNAME/YOUR-PORTFOLIO](https://izzy-dev-ux.github.io/)
+[← Back to Portfolio](https://izzy-dev-ux.github.io/)
+<a href="[https://izzy-dev-ux.github.io/">
+    View Project →
+</a>
