@@ -18,20 +18,27 @@ Designed a Power Query workflow to automate manual payroll reconciliation and re
 - Created a refreshable workflow that reduced manual processing and reporting time.
 
 # Process Documentation
+> Project Files
+
+- **[View Excel Workbook](./data_cleaning.xlsx)**
+- **[View Power Query M Code](./M_code.txt)**
+
 > Key Transformations:
+
 - Removes excluded (ringfenced) records  
 - Applies replacement values where provided  
 - Calculates a final insured payment value for reporting  
 - Amends specific data for record outliers  
 
 > Data Sources
+
 1. **Raw Data**
    - Main dataset containing member and payment data  
 2. **Ringfenced List**
    - Records that must be excluded from processing  
 3. **Replace List**
-   - Contains corrected or updated insured payment values  
-
+   - Contains corrected or updated insured payment values
+  
 > Process Flow Diagram
 
 ![image](flowchart.png)
@@ -48,3 +55,5 @@ Future enhancements could include:
 > About Me
 
 I am a Data Analyst with a background in payroll, pensions, and large-scale financial data environments. I specialise in data cleaning, reporting automation, and workflow optimisation, with a growing interest in intelligent automation and AI-driven analytics solutions.
+
+[← Back to Portfolio]([https://github.com/YOUR-USERNAME/YOUR-PORTFOLIO](https://izzy-dev-ux.github.io/)
